@@ -1,0 +1,36 @@
+name: Test, Build and Publish a beta version
+
+on:
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Install dependencies
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        env:
+          HUSKY_SKIP_INSTALL: true
+        run: |
+          npm pkg delete scripts.prepare
+          npm ci
+
+      - name: Lint, build, test and release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm run build
+          npm run build:lib
+          npx semantic-release --debug --no-verify
