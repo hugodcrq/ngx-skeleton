@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo ""
+echo "git commit - is not allowed"
+echo ""
+echo "Use <npm run commit> instead of <git commit>"
+echo "to interactive and better commit who respect semantic standard with commitlint"
+echo ""
+echo "skip this hook with --no-verify"
+
+false
