@@ -14,19 +14,20 @@
   "author": {
     "name": "Hugo Decroocq"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hugodcrq/ngx-skeleton.git"
-  },
   "scripts": {
     "prepare": "husky install",
-    "start": "nx serve",
-    "build": "nx build",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
     "test": "nx test",
     "prettier:staged": "npx pretty-quick --staged",
     "cz:noverify": "cz --no-verify",
     "commit": "run-s prettier:staged cz:noverify",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "copy": "cp -r README.md dist/hugodcrq/ngx-skeleton",
+    "build:lib:prod": "ng build @hugodcrq/ngx-skeleton --configuration production",
+    "build:lib": "run-s build:lib:prod copy",
+    "deploy": "ng deploy --base-href=/ngx-skeleton/"
   },
   "config": {
     "commitizen": {
@@ -56,6 +57,9 @@
     "@angular/compiler-cli": "^15.1.0",
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
     "@types/jasmine": "~4.3.0",
     "conventional-changelog-cli": "2.2.2",
     "cz-git": "^1.4.1",

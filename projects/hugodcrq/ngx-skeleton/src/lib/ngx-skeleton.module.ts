@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
-import { NgxSkeletonComponent } from './ngx-skeleton.component';
-
-
+import { NgxSkeletonDirective } from './ngx-skeleton.directive';
+import { NgxSkeletonService } from './ngx-skeleton.service';
 
 @NgModule({
-  declarations: [
-    NgxSkeletonComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    NgxSkeletonComponent
-  ]
+  declarations: [NgxSkeletonDirective],
+  imports: [],
+  providers: [NgxSkeletonService],
+  exports: [NgxSkeletonDirective],
 })
-export class NgxSkeletonModule { }
+export class NgxSkeletonModule {}
