@@ -1,9 +1,9 @@
-name: Make a Release and Deploy on GitHub Pages
+name: Make a Release and Deploy on npm
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -18,11 +18,13 @@ jobs:
 
       - name: NPM install, build, release and deploy
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          npm pkg delete scripts.prepare
           npm ci
           npm run build
           npm run build:lib
           npx semantic-release
-          npm run deploy -- --no-silent --name="mr. Dharmen's Bot" --email=shhdharmen@gmail.com
+
+#          npm run deploy -- --no-silent --name="mr. Dharmen's Bot" --email=shhdharmen@gmail.com
