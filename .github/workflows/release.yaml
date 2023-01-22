@@ -1,4 +1,4 @@
-name: Make a Release and Deploy on npm
+name: Make a Release and Deploy on GitHub Pages
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm pkg delete scripts.prepare
-          npm ci
+          npm ci          
           npm run build
           npm run build:lib
           npx semantic-release

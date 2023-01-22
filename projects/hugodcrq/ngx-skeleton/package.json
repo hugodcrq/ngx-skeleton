@@ -1,6 +1,12 @@
 {
   "name": "@hugodcrq/ngx-skeleton",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
+  "description": "⌛Angular library to easily create skeleton loadings without SVG.",
+  "scripts": {
+    "build": "npm run build:sass",
+    "build:sass": "sass ./src/styles/styles.scss ../../../dist/hugodcrq/ngx-skeleton/src/styles/styles.css",
+    "postpublish": "cpx package.json ../../../../../projects/hugodcrq/ngx-skeleton/ && cpx npm-shrinkwrap.json ../../../../../projects/hugodcrq/ngx-skeleton/"
+  },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0"
@@ -8,5 +14,24 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "keywords": [
+    "angular",
+    "angular 2",
+    "skeleton"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/hugodcrq/ngx-skeleton/issues"
+  },
+  "homepage": "https://github.com/hugodcrq/ngx-skeleton#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugodcrq/ngx-skeleton"
+  },
+  "ng-add": {
+    "save": true
+  }
 }
