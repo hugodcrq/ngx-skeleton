@@ -4,17 +4,17 @@
 
 ⌛ Easily create skeleton loadings without SVG.
 
-<img src="./doc/assets/banner.png" alt="skeleton"/>
+<img src="https://github.com/hugodcrq/ngx-skeleton/blob/develop/doc/assets/banner.png?raw=true" alt="skeleton"/>
 
 <br>
 
 - [Introduction](#introduction)
 - [Git](#git)
-    - [Commit message](#commit-message)
-        - [Use npm script](#use-npm-script)
-        - [Use git](#use-git)
-        - [Format](#format)
-        - [Type](#type)
+  - [Commit message](#commit-message)
+    - [Use npm script](#use-npm-script)
+    - [Use git](#use-git)
+    - [Format](#format)
+    - [Type](#type)
 
 ## Introduction
 
@@ -63,8 +63,8 @@ git commit --no-verify
 
 - #### Format
 
-    - A commit message consists of a **header**, **body** and **footer**.
-    - The header has a **type** and a **subject**:
+  - A commit message consists of a **header**, **body** and **footer**.
+  - The header has a **type** and a **subject**:
 
 ```text
 <type>[(<scope>)]: <emoji> <subject>
@@ -78,17 +78,17 @@ git commit --no-verify
 
 - #### Type
 
-    - ✨ `feat` — A new feature
-    - 🐛 `fix` — A bug fix
-    - 📝 `docs` — Documentation only changes
-    - 💄 `style` — Markup, white-space, formatting, missing semi-colons... not affect the meaning of the code
-    - ♻ `refactor` — A code change that neither fixes a bug or adds a feature
-    - ⚡ `perf` — A code change that improves performance
-    - ✅ `test` — Adding missing tests
-    - 📦️ `build` — Changes that affect the build system or external dependencies
-    - 🎡 `ci` — CI related changes
-    - 🔨 `chore` — Other changes that don't modify src or test files
-    - ⏪️ `revert` — Reverts a previous commit
+  - ✨ `feat` — A new feature
+  - 🐛 `fix` — A bug fix
+  - 📝 `docs` — Documentation only changes
+  - 💄 `style` — Markup, white-space, formatting, missing semi-colons... not affect the meaning of the code
+  - ♻ `refactor` — A code change that neither fixes a bug or adds a feature
+  - ⚡ `perf` — A code change that improves performance
+  - ✅ `test` — Adding missing tests
+  - 📦️ `build` — Changes that affect the build system or external dependencies
+  - 🎡 `ci` — CI related changes
+  - 🔨 `chore` — Other changes that don't modify src or test files
+  - ⏪️ `revert` — Reverts a previous commit
 
 ---
 
