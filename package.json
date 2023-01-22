@@ -1,6 +1,6 @@
 {
   "name": "@hugodcrq/ngx-skeleton",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "⌛Angular library to easily create skeleton loadings without SVG.",
   "publishConfig": {
     "access": "public"
@@ -30,7 +30,6 @@
     "test:lib:headless": "cross-env CI=true npm run test:lib",
     "ci:start-server": "serve -l 4200 -s ./dist/ngx-skeleton",
     "semantic-release": "semantic-release",
-    "prepare": "husky install",
     "prettier:staged": "npx pretty-quick --staged",
     "cz:noverify": "cz --no-verify",
     "commit": "run-s prettier:staged cz:noverify"
