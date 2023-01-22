@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { SkeletonItem } from './ngx-skeleton-ref';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NgxSkeletonService {
-  skeletonItems: HTMLElement[] = [];
+  skeletonItems: SkeletonItem[] = [];
 
   /**
    * Show skeleton items inside parent container element
@@ -13,9 +14,10 @@ export class NgxSkeletonService {
    */
   show(containerElId?: string) {
     this.skeletonItems = this.getSkeletonItems(containerElId);
-    this.skeletonItems.forEach((el: HTMLElement) => {
-      const child = el.firstElementChild as HTMLElement;
-      if (child) child.style.opacity = '0';
+    this.skeletonItems.forEach((skeleton: SkeletonItem) => {
+      skeleton.childrenList.forEach((skeletonChild, index) => {
+        skeletonChild.element.style.opacity = '0';
+      });
     });
   }
 
@@ -23,10 +25,10 @@ export class NgxSkeletonService {
    * Hide showed skeleton items
    */
   hide() {
-    this.skeletonItems.forEach((el: HTMLElement) => {
-      const child = el.firstElementChild as HTMLElement;
-      if (child) child.style.opacity = '100';
-      el.classList.remove('skeleton');
+    this.skeletonItems.forEach((item: SkeletonItem) => {
+      const childrenList = Array.from(item.childrenList);
+      if (childrenList) childrenList.forEach((child) => (child.element.style.opacity = '100'));
+      item.element.classList.remove('hd-skeleton');
     });
   }
 
@@ -35,7 +37,7 @@ export class NgxSkeletonService {
    *
    * @param parentElId The parent HTMLElement id
    */
-  getSkeletonItems(parentElId?: string): HTMLElement[] {
+  getSkeletonItems(parentElId?: string): SkeletonItem[] {
     if (parentElId) {
       const parentEl = document.getElementById(parentElId);
       if (parentEl) return this.getFromParentSkeletonItems(parentEl);
@@ -49,7 +51,7 @@ export class NgxSkeletonService {
    * @private
    */
   private getDocumentSkeletonItems() {
-    return Array.from(document.querySelectorAll('[skeleton]')) as HTMLElement[];
+    return this.adaptSkeletonListItem(document.querySelectorAll('[hdSkeleton]'));
   }
 
   /**
@@ -59,6 +61,10 @@ export class NgxSkeletonService {
    * @private
    */
   private getFromParentSkeletonItems(parentEl: HTMLElement) {
-    return Array.from(parentEl.querySelectorAll('[skeleton]')) as HTMLElement[];
+    return this.adaptSkeletonListItem(parentEl.querySelectorAll('[hdSkeleton]'));
+  }
+
+  adaptSkeletonListItem(items: NodeListOf<HTMLElement>) {
+    return (Array.from(items) as HTMLElement[]).map((el) => new SkeletonItem(el));
   }
 }
