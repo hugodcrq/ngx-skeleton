@@ -1,9 +1,18 @@
 .hd-skeleton {
-  display: block;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: #dddbdd;
-  cursor: pointer;
+  position: relative !important;
+  display: block !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  background-color: #dddbdd !important;
+  cursor: default !important;
+  box-shadow: none !important;
+  border: none;
+
+  &:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    cursor: default !important;
+  }
 
   &::after {
     position: absolute;
