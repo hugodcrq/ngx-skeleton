@@ -8,16 +8,18 @@ import { NgxSkeletonService } from '@hugodcrq/ngx-skeleton';
 })
 export class AppComponent implements OnInit {
   title = 'ngx-skeleton';
-  skeletonService = inject(NgxSkeletonService);
+  skeleton = inject(NgxSkeletonService);
 
   ngOnInit() {
-    this.skeletonService.show();
-    this.hide();
+    this.skeleton.show();
+
+    // simulate long task (3s) and hide
+    setTimeout(() => {
+      this.skeleton.hide();
+    }, 3000);
   }
 
-  hide() {
-    setTimeout(() => {
-      this.skeletonService.hide();
-    }, 2000);
+  reload() {
+    window.location.reload();
   }
 }
