@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/hugodcrq/ngx-skeleton/compare/v1.2.1...v1.2.2) (2023-01-23)
+
+
+### Bug Fixes
+
+* :bug: add environments folder to demo app ([ed552a4](https://github.com/hugodcrq/ngx-skeleton/commit/ed552a4ae998fb4fafdd198c3d11cb7081805832))
+
 ## [1.2.1](https://github.com/hugodcrq/ngx-skeleton/compare/v1.2.0...v1.2.1) (2023-01-23)
 
 
