@@ -16,7 +16,9 @@ export class NgxSkeletonService {
     this.skeletonItems = this.getSkeletonItems(containerElId);
     this.skeletonItems.forEach((skeleton: SkeletonItem) => {
       skeleton.childrenList.forEach((skeletonChild, index) => {
-        skeletonChild.element.style.opacity = '0';
+        if (skeletonChild.element && skeletonChild.element.style) {
+          skeletonChild.element.style.opacity = '0';
+        }
       });
     });
   }
@@ -27,7 +29,12 @@ export class NgxSkeletonService {
   hide() {
     this.skeletonItems.forEach((item: SkeletonItem) => {
       const childrenList = Array.from(item.childrenList);
-      if (childrenList) childrenList.forEach((child) => (child.element.style.opacity = '100'));
+      if (childrenList)
+        childrenList.forEach((skeletonChild) => {
+          if (skeletonChild.element && skeletonChild.element.style) {
+            skeletonChild.element.style.opacity = '100';
+          }
+        });
       item.element.classList.remove('hd-skeleton');
     });
   }
