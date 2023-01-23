@@ -16,6 +16,10 @@
 
 <br>
 
+## Demo
+
+Live demo [here](https://hugodcrq.github.io/ngx-skeleton/).
+
 ## Installation
 
 Install ngx-skeleton via NPM, using the command below.
