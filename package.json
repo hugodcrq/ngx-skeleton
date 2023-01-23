@@ -3,7 +3,8 @@
   "version": "1.1.0",
   "description": "⌛Angular library to easily create skeleton loadings without SVG.",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "tag": "latest"
   },
   "license": "MIT",
   "keywords": [
