@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/hugodcrq/ngx-skeleton/compare/v1.1.0...v1.2.0) (2023-01-23)
+
+
+### Features
+
+* :sparkles: use skeleton from library in demo app ([d4dbddc](https://github.com/hugodcrq/ngx-skeleton/commit/d4dbddcc2c66b82d08f644ec12fb84bf9e9fb4d9))
+
 # [1.1.0](https://github.com/hugodcrq/ngx-skeleton/compare/v1.0.0...v1.1.0) (2023-01-22)
 
 
