@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     // simulate long task (3s) and hide
     setTimeout(() => {
       this.skeleton.hide();
-    }, 3000);
+    }, 10000);
   }
 
   reload() {

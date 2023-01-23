@@ -12,7 +12,9 @@
 
 ⌛ Easily create skeleton loadings without SVG.
 
-<img src="https://github.com/hugodcrq/ngx-skeleton/blob/develop/doc/assets/banner.png?raw=true" alt="skeleton"/>
+<p align="center">
+<img src="https://raw.githubusercontent.com/hugodcrq/ngx-skeleton/develop/doc/assets/banner.gif?raw=true" alt="skeleton"/>
+</p>
 
 ## Demo
 
@@ -76,7 +78,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-In `.html` component add `hsSkeleton` directive
+In `.html` component add `<div></div>` wrapper with `hdSkeleton` directive
 
 ```html
 <!-- with single children -->
