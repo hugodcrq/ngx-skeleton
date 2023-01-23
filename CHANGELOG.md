@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/hugodcrq/ngx-skeleton/compare/v1.2.0...v1.2.1) (2023-01-23)
+
+
+### Bug Fixes
+
+* :bug: add missing package angular-cli-ghpages ([71733db](https://github.com/hugodcrq/ngx-skeleton/commit/71733db75d4c6e92c7804161cf3d5cad1e00f255))
+
 # [1.2.0](https://github.com/hugodcrq/ngx-skeleton/compare/v1.1.0...v1.2.0) (2023-01-23)
 
 
