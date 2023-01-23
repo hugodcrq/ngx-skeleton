@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/hugodcrq/ngx-skeleton/compare/v1.3.1...v1.4.0) (2023-01-23)
+
+
+### Features
+
+* :sparkles: improve demo app ([e280243](https://github.com/hugodcrq/ngx-skeleton/commit/e280243d2e7dbe0a0ec03422694a32c6cc3ce734))
+
 ## 1.3.1 (2023-01-23)
 
 ### Fix
