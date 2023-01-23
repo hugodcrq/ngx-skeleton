@@ -1,12 +1,63 @@
 # <img src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg" alt="semantic-release logo" width="24px"/> ngx-skeleton
 
+[![npm](https://img.shields.io/npm/v/@hugodcrq/ngx-skeleton?style=flat&logo=npm)](https://www.npmjs.com/package/@hugodcrq/ngx-skeleton)
+[![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat)](https://github.com/hugodcrq/ngx-skeleton/blob/master/LICENSE)
+[![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat)]()
+[![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/hugodcrq/ngx-skeleton/compare)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+[![hugodcrq](https://img.shields.io/badge/@-hugodcrq-383636?style=flat-square&labelColor=8f68d4)](https://github.com/hugodcrq/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
+<br>
 
 ⌛ Easily create skeleton loadings without SVG.
 
 <img src="https://github.com/hugodcrq/ngx-skeleton/blob/develop/doc/assets/banner.png?raw=true" alt="skeleton"/>
 
 <br>
+
+## Installation
+
+Install ngx-skeleton via NPM, using the command below.
+
+```bash
+npm install @hugodcrq/ngx-skeleton
+```
+
+Import `NgxSkeletonModule` in your `app.module`.
+
+```typescript
+import { NgxSkeletonModule } from "@hugodcrq/ngx-skeleton";
+@NgModule({
+  imports: [NgxSkeletonModule],
+})
+class AppModule {}
+```
+
+## Basic Usage
+
+```typescript
+import { NgxSkeletonService } from "@hugodcrq/ngx-skeleton";
+import { OnInit } from "@angular/core";
+
+@Component({})
+export class AppComponent implements OnInit {
+  skeleton = inject(NgxSkeletonService); // You can also inject via the constructor
+
+  constructor() {}
+
+  ngOnInit() {
+    this.skeleton.show();
+
+    // simulate long task (3s) and hide
+    setTimeout(() => {
+      this.skeleton.hide();
+    }, 3000);
+  }
+}
+```
+
+## Development
 
 - [Introduction](#introduction)
 - [Git](#git)
@@ -16,7 +67,7 @@
     - [Format](#format)
     - [Type](#type)
 
-## Introduction
+### Introduction
 
 This starter-kit provide complete implementation of an electron application with angular front framework
 and complete pipe to deployment.
@@ -30,12 +81,6 @@ Currently runs with:
 - [commitlint](https://github.com/conventional-changelog/commitlint) - Checks if your commit messages meet the conventional commit format
 - [commitizen](https://github.com/commitizen/cz-cli) - Simple commit conventions from terminal prompt
 - [cz-git](https://github.com/Zhengqbbb/cz-git) - Adapter for commitizen to custom easy configuration
-
-## Installation
-
-## Basic Usage
-
-## Development
 
 ### Git
 

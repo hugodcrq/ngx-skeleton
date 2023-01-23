@@ -71,6 +71,21 @@
     opacity: 0.8;
   }
 
+  .reload {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .reload:hover {
+    transform: scale(1.2);
+  }
+
+  .reload span {
+    margin-left: 6px;
+  }
+
   .content {
     display: flex;
     margin: 82px auto 32px;
@@ -288,18 +303,31 @@
     />
     <span>ngx-skeleton</span>
     <div class="spacer"></div>
-    demo application
-    <img
-      width="40"
-      alt="Angular Logo"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />
+    <div class="reload" (click)="reload()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-reload"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1.002 7.935 1.007 9.425 4.747" />
+        <path d="M20 4v5h-5" />
+      </svg>
+      <span>Reload</span>
+    </div>
   </div>
 
   <div class="content" role="main">
     <!-- Resources -->
     <span hdSkeleton>
-      <h1>ngx-skeleton</h1>
+      <h1>@hugodcrq/ngx-skeleton</h1>
     </span>
     <div class="sub" hdSkeleton>
       <p>⌛ Easily create skeleton loadings without SVG.</p>
@@ -327,7 +355,7 @@
 
     <!-- Resources -->
     <div hdSkeleton>
-      <h2>Exemple with angular starter page</h2>
+      <h3>Exemple with angular starter page</h3>
     </div>
     <div class="sub" hdSkeleton>
       <p>Here are some links to help you get started:</p>
@@ -416,7 +444,7 @@
     </div>
 
     <div hdSkeleton>
-      <h2>Next Steps</h2>
+      <h3>Next Steps</h3>
     </div>
 
     <div class="sub" hdSkeleton>
@@ -521,9 +549,9 @@
     <!-- Footer -->
     <div hdSkeleton>
       <footer>
-        Love Angular?&nbsp;
-        <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
-          Give our repo a star.
+        Love @hugodcrq/ngx-skeleton ?&nbsp;
+        <a href="https://github.com/hugodcrq/ngx-skeleton" target="_blank" rel="noopener">
+          Give repo star.
           <div class="github-star-badge">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none" />
