@@ -14,6 +14,14 @@
 * :sparkles: update demo app - update github action test to be run on staging - add installation section to README - add LICENCE ([2f3bc40](https://github.com/hugodcrq/ngx-skeleton/commit/2f3bc403e378dfe47f3694530d6fccc938522fab))
 * :sparkles: update release github action to trigger master instead of main to semantic-release - update README to add demo section ([c5c6f4f](https://github.com/hugodcrq/ngx-skeleton/commit/c5c6f4f71b4dd004bcdbdb1b4190ff824e6b5d61))
 
+# [1.3.0](https://github.com/hugodcrq/ngx-skeleton/compare/v1.2.2...v1.3.0) (2023-01-23)
+
+
+### Features
+
+* :sparkles: update demo app - update github action test to be run on staging - add installation section to README - add LICENCE ([2f3bc40](https://github.com/hugodcrq/ngx-skeleton/commit/2f3bc403e378dfe47f3694530d6fccc938522fab))
+* :sparkles: update release github action to trigger master instead of main to semantic-release - update README to add demo section ([c5c6f4f](https://github.com/hugodcrq/ngx-skeleton/commit/c5c6f4f71b4dd004bcdbdb1b4190ff824e6b5d61))
+
 ## [1.2.2](https://github.com/hugodcrq/ngx-skeleton/compare/v1.2.1...v1.2.2) (2023-01-23)
 
 
