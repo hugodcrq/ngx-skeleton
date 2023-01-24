@@ -68,8 +68,26 @@ p {
   cursor: pointer;
 }
 
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 16px 15px 0;
+  height: 10px;
+  width: 100px;
+}
+
+.progress-value {
+  background: #c3032f;
+  border-radius: 20px;
+  height: 100%;
+  width: 0;
+  opacity: 1;
+  transition: 1s ease 0.3s;
+}
+
 .reload:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .reload span {
