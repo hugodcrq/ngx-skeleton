@@ -18,7 +18,7 @@
 
 ## Demo
 
-Live demo [here](https://hugodcrq.github.io/ngx-skeleton/).
+Live demo <a href="https://hugodcrq.github.io/ngx-skeleton" target="_blank">here</a>.
 
 ## Installation
 
@@ -32,6 +32,7 @@ Import `NgxSkeletonModule` in your `app.module`.
 
 ```typescript
 import { NgxSkeletonModule } from "@hugodcrq/ngx-skeleton";
+
 @NgModule({
   imports: [NgxSkeletonModule],
 })
@@ -58,8 +59,8 @@ or if you use CSS add this to your styles inside your `angular.json`:
 In `.ts` component
 
 ```typescript
+import { Component, inject, OnInit } from "@angular/core";
 import { NgxSkeletonService } from "@hugodcrq/ngx-skeleton";
-import { OnInit } from "@angular/core";
 
 @Component({})
 export class AppComponent implements OnInit {
@@ -78,40 +79,31 @@ export class AppComponent implements OnInit {
 }
 ```
 
-In `.html` component add `<div></div>` wrapper with `hdSkeleton` directive
+In `.html` use `hdSkeleton` directive
 
 ```html
-<!-- with single children -->
+<!-- with <div></div> wrapper for element without children -->
 <div hdSkeleton>
   <h1>Title exemple</h1>
 </div>
 
-<!-- with multiples children -->
-<a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial" hdSkeleton>
-  <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-  </svg>
-  <span>Learn Angular</span>
-  <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-  </svg>
-</a>
+<!-- directly on parent if element has children or add <div></div> wrapper -->
+<div class="card" hdSkeleton>
+  <div class="card-header">Github logo</div>
+  <div class="card-body">
+    <img src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="github" />
+  </div>
+</div>
 ```
 
 ## Development
 
-- [Introduction](#introduction)
 - [Git](#git)
   - [Commit message](#commit-message)
     - [Use npm script](#use-npm-script)
     - [Use git](#use-git)
     - [Format](#format)
     - [Type](#type)
-
-### Introduction
-
-This starter-kit provide complete implementation of an electron application with angular front framework
-and complete pipe to deployment.
 
 > To respect the standard of [Conventional Commits](https://www.conventionalcommits.org), things have been put in place, for more information see the [git section below](#git).
 
@@ -175,33 +167,3 @@ git commit --no-verify
   - 🎡 `ci` — CI related changes
   - 🔨 `chore` — Other changes that don't modify src or test files
   - ⏪️ `revert` — Reverts a previous commit
-
----
-
-## Angular default README
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
-
-### Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-### Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-### Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
